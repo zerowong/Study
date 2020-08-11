@@ -12,17 +12,25 @@ try {
   console.log(error.message);
 }
 // 1.finally 子句：无论 try 语句块里是否抛出错误，该子句都会执行。如果提供了该子句，则 catch 子句变为可选
-// try 和 catch 语句块里 return 被忽略，函数只能返回2
+// 即使 try 语句块里有 return 语句，依然会执行 finally 语句块，如果此时 finally 语句块里也有 return 语句，则会覆盖掉先前的 return 语句
 function testFinally() {
   try {
     return 0;
   } catch (error) {
     return 1;
   } finally {
+    console.log('hi');
+  }
+}
+console.log(testFinally()); // 0
+function testFinally2() {
+  try {
+    return 0;
+  } finally {
     return 2;
   }
 }
-console.log(testFinally());
+console.log(testFinally2()); // 2
 // 2.错误类型。7中错误类型详见书或MDN
 // 处理特定类型错误
 function catchError(error) {
