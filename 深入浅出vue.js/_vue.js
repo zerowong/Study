@@ -63,7 +63,7 @@ function traverse(val) {
 }
 
 /**
- * @param {Set<any>} seen 
+ * @param {Set<any>} seen
  */
 function _traverse(val, seen) {
   const isA = Array.isArray(val)
@@ -132,7 +132,9 @@ function set(target, key, val) {
   }
   const ob = target.__ob__
   if (target._isVue || (ob && ob.vmCount)) {
-    warn('Avoid adding reactive properties to a Vue instance or its root $data at runtime - declare it upfront in the data option.')
+    warn(
+      'Avoid adding reactive properties to a Vue instance or its root $data at runtime - declare it upfront in the data option.'
+    )
     return val
   }
   if (!ob) {
@@ -156,7 +158,7 @@ function del(target, key) {
     return
   }
   const ob = target.__ob__
-  if (target._isVue && (ob && ob.vmCount)) {
+  if (target._isVue && ob && ob.vmCount) {
     warn('Avoid deleting properties on a Vue instance or its root $data - just set it to null.')
     return
   }
@@ -451,7 +453,7 @@ function createTextNode(val) {
 
 /**
  * 用于静态节点和插槽节点的优化浅克隆，因为它们可以在多个渲染中重复使用，克隆它们可以避免在DOM操作依赖于它们的元素引用时出错
- * @param {VNode} vnode 
+ * @param {VNode} vnode
  */
 function cloneVNode(vnode) {
   const cloned = new VNode(
@@ -486,7 +488,7 @@ function parentNode(node) {
 
 const nodeOps = Object.freeze({
   removeChild,
-  parentNode
+  parentNode,
 })
 
 function removeNode(el) {
