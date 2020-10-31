@@ -85,3 +85,18 @@ export const no = () => false
  * 返回相同的值
  */
 export const identity = (_) => _
+
+/**
+ * 生成一个Map并返回一个函数以检查键是否在该Map中
+ * @param {string} str
+ * @param {boolean} expectsLowerCase
+ * @returns {(val:string) => true | void}
+ */
+export function makeMap(str, expectsLowerCase = false) {
+  const map = Object.create(null)
+  const list = str.split(',')
+  for (let i = 0; i < list.length; i++) {
+    map[list[i]] = true
+  }
+  return expectsLowerCase ? (val) => map[val.toLowerCase()] : (val) => map[val]
+}
