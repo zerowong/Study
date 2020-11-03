@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Later</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <% articles.forEach((article) => { %>
+        <li>
+          <a href="/articles/<%= article.id %>"> <%= article.title %> </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>
