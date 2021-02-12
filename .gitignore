@@ -1,10 +1,2 @@
-# npm
 node_modules
-package-lock.json
-package.json
-
-# editor
 .vscode
-
-# other
-test.js
