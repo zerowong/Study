@@ -84,7 +84,7 @@ setupMap({ lng: 1, lat: 1, tileSize: 16 })
 
 ## 布尔字面量类型
 
-TypeScript 也具有布尔文字类型。你可以使用它们来约束属性相互关联的对象值
+TypeScript 也具有布尔字面量类型。你可以使用它们来约束属性相互关联的对象值
 
 ```ts
 interface ValidateSuccess {

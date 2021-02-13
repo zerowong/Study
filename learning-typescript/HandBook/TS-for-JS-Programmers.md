@@ -4,15 +4,15 @@
 
 TypeScript 与 JavaScript 有着不寻常的关系。 TypeScript 提供 JavaScript 的所有功能，并在这些功能的基础上附加一层：TypeScript 的类型系统。
 
-例如，JavaScript 提供了诸如字符串，数字和对象之类的语言原语(language primitives)，但它不会检查您是否始终如一地分配了它们。TypeScript 可以。
+例如，JavaScript 提供了诸如字符串，数字和对象之类的语言原语(language primitives)，但它不会检查你是否始终如一地分配了它们。TypeScript 可以。
 
-这意味着您现有的有效 JavaScript 代码也是 TypeScript 代码。 TypeScript 的主要优点在于，它可以突出显示代码中的意外行为，从而减少错误的机会。
+这意味着你现有的有效 JavaScript 代码也是 TypeScript 代码。 TypeScript 的主要优点在于，它可以突出显示代码中的意外行为，从而减少错误的机会。
 
 本教程简要介绍 TypeScript，重点介绍其类型系统。
 
 ## 类型推断
 
-TypeScript 能理解 JavaScript，并会在许多情况下为您生成类型。例如，在创建变量并分配了特定值时，TypeScript 将使用该值的类型作为其类型。
+TypeScript 能理解 JavaScript，并会在许多情况下为你生成类型。例如，在创建变量并分配了特定值时，TypeScript 将使用该值的类型作为其类型。
 
 ```ts
 let helloWorld = 'hello world'
@@ -21,11 +21,11 @@ let helloWorld = 'hello world'
 
 通过理解 JavaScript 的工作原理，TypeScript 可以构建一个接受具有类型的 JavaScript 代码的类型系统。 这提供了一个无需添加额外的字符来使代码中的类型明确的类型系统。 这就是 TypeScript 在上面的示例中知道 helloWorld 是字符串的方式。
 
-您可能已经在用 VSCode 写 JavaScript，并带有自动补全功能。 VSCode 在后台使用 TypeScript 使其更易于使用 JavaScript。
+你可能已经在用 VSCode 写 JavaScript，并带有自动补全功能。 VSCode 在后台使用 TypeScript 使其更易于使用 JavaScript。
 
 ## 定义类型
 
-您可以在 JavaScript 中使用多种设计模式。但是，某些设计模式使自动推断类型变得困难（例如，使用动态编程的模式）。为了覆盖这些情况，TypeScript 支持 JavaScript 的扩展，它提供了一些方法让你告诉 TypeScript 一个变量应该是什么类型。
+你可以在 JavaScript 中使用多种设计模式。但是，某些设计模式使自动推断类型变得困难（例如，使用动态编程的模式）。为了覆盖这些情况，TypeScript 支持 JavaScript 的扩展，它提供了一些方法让你告诉 TypeScript 一个变量应该是什么类型。
 
 例如，要创建一个具有推断类型的对象，其中包括 `name: string` 和 `id: number`，你可以这样写：
 
@@ -64,7 +64,7 @@ const user: User = {
 }
 ```
 
-由于 JavaScript 支持类和面向对象的编程，因此 TypeScript 也支持。 您可以对类使用接口声明：
+由于 JavaScript 支持类和面向对象的编程，因此 TypeScript 也支持。 你可以对类使用接口声明：
 
 ```ts
 interface User {
