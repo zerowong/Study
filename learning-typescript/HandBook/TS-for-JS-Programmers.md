@@ -132,14 +132,15 @@ function getLength(obj: string | string[]) {
 ```
 
 要了解一个变量的类型，使用`typeof`：
-| Type | Predicate |
-| ---- | --------- |
-| string | `typeofs === "string"` |
-| number | `typeof n === "number"` |
-| boolean | `typeof b === "boolean"` |
+
+| Type      | Predicate                          |
+| --------- | ---------------------------------- |
+| string    | `typeofs === "string"`             |
+| number    | `typeof n === "number"`            |
+| boolean   | `typeof b === "boolean"`           |
 | undefined | `typeof undefined === "undefined"` |
-| function | `typeof f === "function"` |
-| array | `Array.isArray(a)` |
+| function  | `typeof f === "function"`          |
+| array     | `Array.isArray(a)`                 |
 
 例如，你可以根据传递给你的是字符串还是数组，让函数返回不同的值。
 
